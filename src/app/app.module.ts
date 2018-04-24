@@ -13,6 +13,7 @@ import { CryptoHoldingsService } from './services/crypto-holdings.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { PortfolioSummaryComponent } from './components/portfolio-summary/portfolio-summary.component';
 
+// TODO: convert to an IONIC App ?
 
 @NgModule({
   declarations: [
