@@ -1,0 +1,5 @@
+<h3>Summary</h3>
+<p>Total Net Worth: {{totalNetWorth | currency }}</p>
+<div *ngIf="chart">
+  <canvas id="canvas">{{ chart }}</canvas>
+</div>

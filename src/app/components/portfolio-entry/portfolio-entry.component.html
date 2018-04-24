@@ -1,0 +1,33 @@
+<div class="col-md-4">  
+  <table class="table table-striped" *ngIf="holding!==null">  
+   <thead>
+     <nav>
+        <a [routerLink]="['/edit',  holding.id ]" routerLinkActive="active" class="btn btn-default">
+          Edit
+        </a>
+     </nav>
+   </thead>
+   
+   <tbody> 
+      <tr> <td>Symbol:</td> <td>{{holding.symbol | uppercase}}</td> </tr>   
+      <tr> <td>Name:</td> <td>{{holding.name | titlecase }}</td> </tr>  
+      <tr> <td>Quantity:</td> <td>{{holding.quantity | number:'1.2-5' }}</td> </tr>  
+      <tr *ngIf="holding.rate"> <td>Rate:</td> <td>{{holding.rate | currency }}</td> </tr>  
+      <tr *ngIf="holding.rate && holding.quantity"> <td>Value:</td> <td>{{(holding.quantity * holding.rate) | currency }}</td> </tr>
+   </tbody>  
+ 
+   <tfoot>
+     <nav>
+       <a [routerLink]="['/details',  prev ]" 
+               *ngIf="prev!=-1" class="btn btn-default">
+          Prev
+       </a>
+       <a [routerLink]="['/details',  next ]" 
+             *ngIf="next!=-1" class="btn btn-default">
+          Next
+       </a>
+     </nav>
+   </tfoot>
+  
+  </table>  
+ </div>   

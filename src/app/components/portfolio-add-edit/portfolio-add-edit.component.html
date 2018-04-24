@@ -1,0 +1,30 @@
+<div class="form">
+  <h4>{{title}}</h4>
+  <div class="form-container">
+   <form (ngSubmit)="saveHolding()">
+    	
+	<div class="form-group">
+        <label for="symbol">Symbol</label>
+        <input type="text" name="symbol" [(ngModel)]="holding.symbol" 
+          class="form-control" required />
+    </div>
+  
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" [(ngModel)]="holding.name" autocomplete="name"
+                            class="form-control" required />
+    </div>
+  
+    <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" name="quantity" [(ngModel)]="holding.quantity" autocomplete="quantity"
+                            class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <a class="btn btn-default" routerLink="/">Cancel</a>
+        <button class="btn btn-primary">Save</button>
+    </div>
+   </form>
+  </div>
+</div>
